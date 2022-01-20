@@ -1,0 +1,85 @@
+---
+title: "Test"
+author: "Niklas"
+date: "1/20/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+accidents <- read.csv("accidents_2017.csv")
+View(accidents)
+air_qual <- read.csv("air_quality_Nov2017.csv")
+View(air_qual)
+air_stations <- read.csv("air_stations_Nov2017.csv")
+View(air_stations)
+births <- read.csv("births.csv")
+View(births)
+bus_stops <- read.csv("bus_stops.csv")
+View(bus_stops)
+deaths <- read.csv("deaths.csv")
+View(deaths)
+
+#Immigrants
+immi_nat<-  read.csv("immigrants_by_nationality.csv")
+View(immi_nat)
+immi_age <- read.csv("immigrants_emigrants_by_age.csv")
+View(immi_age)
+immi_dest <- read.csv("immigrants_emigrants_by_destination.csv")
+View(immi_dest)
+immi_dest2 <- read.csv("immigrants_emigrants_by_destination2.csv")
+View(immi_dest2)
+immi_sex <- read.csv("immigrants_emigrants_by_sex.csv")
+View(immi_sex)
+
+
+life_ex <- read.csv("life_expectancy.csv")
+View(life_ex)
+baby_names <- read.csv("most_frequent_baby_names.csv")
+View(baby_names)
+names_freq <- read.csv("most_frequent_names.csv")
+View(names_freq)
+pop <- read.csv("population.csv")
+View(pop)
+transp <- read.csv("transports.csv")
+View(transp)
+unempl <- read.csv("unemployment.csv")
+View(unempl)
+```
+
+## accidents
+```{r}
+dim(accidents)
+summary(accidents)
+accidents$District.Name <- as.factor(accidents$District.Name)
+unique(accidents$District.Name)
+table(accidents$District.Name)
+```
+
+## births
+```{r}
+summary(births)
+```
+```{r}
+unique(births$Year)
+```
+
+```{r}
+bus_stops$District.Name <- as.factor(bus_stops$District.Name)
+unique(bus_stops$District.Name)
+```
+
+```{r}
+unique(accidents$District.Name)
+```
+
+```{r}
+accidents$Neighborhood.Name <- as.factor(accidents$Neighborhood.Name)
+unique(accidents$Neighborhood.Name)
+```
+
+
