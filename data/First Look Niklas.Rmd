@@ -13,14 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 accidents <- read.csv("accidents_2017.csv")
 View(accidents)
-air_qual <- read.csv("air_quality_Nov2017.csv")
-View(air_qual)
-air_stations <- read.csv("air_stations_Nov2017.csv")
-View(air_stations)
+
 births <- read.csv("births.csv")
 View(births)
-bus_stops <- read.csv("bus_stops.csv")
-View(bus_stops)
+
 deaths <- read.csv("deaths.csv")
 View(deaths)
 
@@ -40,13 +36,9 @@ View(immi_sex)
 life_ex <- read.csv("life_expectancy.csv")
 View(life_ex)
 baby_names <- read.csv("most_frequent_baby_names.csv")
-View(baby_names)
-names_freq <- read.csv("most_frequent_names.csv")
-View(names_freq)
-pop <- read.csv("population.csv")
+)
 View(pop)
-transp <- read.csv("transports.csv")
-View(transp)
+
 unempl <- read.csv("unemployment.csv")
 View(unempl)
 ```
@@ -64,22 +56,6 @@ table(accidents$District.Name)
 ```{r}
 summary(births)
 ```
-```{r}
-unique(births$Year)
-```
 
-```{r}
-bus_stops$District.Name <- as.factor(bus_stops$District.Name)
-unique(bus_stops$District.Name)
-```
-
-```{r}
-unique(accidents$District.Name)
-```
-
-```{r}
-accidents$Neighborhood.Name <- as.factor(accidents$Neighborhood.Name)
-unique(accidents$Neighborhood.Name)
-```
 
 
